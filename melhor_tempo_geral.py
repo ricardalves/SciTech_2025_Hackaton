@@ -84,5 +84,11 @@ if pacientes_atendidos:
     print(f"Tempo total gasto: {tempo_total_disp - tempo_restante:.1f} min")
     print(f"Tempo restante: {tempo_restante:.1f} min")
     print(f"Total de pacientes socorridos: {len(pacientes_atendidos)}")
+    sum=0
+    for paciente in pacientes_atendidos:
+        sum+=paciente["prioridade"]
+    
+    
+    print(f"Soma das prioridades: {sum}")
 else:
     print("❌ Nenhum paciente pôde ser socorrido dentro do tempo total disponível.")
